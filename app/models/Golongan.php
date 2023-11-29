@@ -41,12 +41,14 @@ class Golongan extends Model
      {
           $kode = $_POST['kode'];
           $nama = $_POST['nama'];
+          $updated_at = date('Y-m-d H:i:s');
           $id = $_POST['id'];
 
-          $sql = "UPDATE golongans SET kode = :kode, nama = :nama WHERE id=:id";
+          $sql = "UPDATE golongans SET kode = :kode, nama = :nama, updated_at = :updated_at WHERE id=:id";
           $stmt = $this->db->prepare($sql);
           $stmt->bindParam(":nama", $nama);
           $stmt->bindParam(":kode", $kode);
+          $stmt->bindParam(":updated_at", $updated_at);
           $stmt->bindParam(":id", $id);
           $stmt->execute();
      }

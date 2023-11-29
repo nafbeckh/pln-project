@@ -13,7 +13,7 @@
   </div>
 
   <div class="content">
-    <div class="container" style="width: 50%;">
+    <div class="container">
       <div class="card">
         <div class="card-header">
           <div class="header-title">
