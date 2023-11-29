@@ -58,7 +58,3 @@
     </div>
   </div>
 </div>
-
-<form method="post" id="formDelete" hidden>
-  <input type="text" name="id" id="id">
-</form>
