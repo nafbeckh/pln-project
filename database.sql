@@ -1,0 +1,49 @@
+CREATE TABLE golongans (
+	id TINYINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	kode VARCHAR(10) NOT NULL,
+	nama VARCHAR(50) NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	email VARCHAR(50) NOT NULL UNIQUE,
+	password VARCHAR(100) NOT NULL,
+	nama VARCHAR(100) NOT NULL,
+	alamat TEXT NOT NULL,
+	no_hp VARCHAR(25) NOT NULL,
+	kode_pos VARCHAR(5) NOT NULL,
+	role TINYINT NOT NULL,
+	status_aktif ENUM('Y','N') DEFAULT 'Y',
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pelanggans (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_gol TINYINT NOT NULL,
+	no_pelangggan VARCHAR(20) NOT NULL,
+	nama VARCHAR(50) NOT NULL,
+	alamat TEXT NOT NULL,
+	ktp VARCHAR(20) NOT NULL,
+	seri VARCHAR(20) NOT NULL,
+	meteran VARCHAR(20) NOT NULL,
+	status_aktif ENUM('Y','N') DEFAULT 'Y',
+	id_user INT NOT NULL,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY(id_gol) REFERENCES golongans(id),
+	FOREIGN KEY(id_user) REFERENCES users(id)
+);
+
+INSERT INTO users (email, password, nama, alamat, no_hp, kode_pos, role)
+VALUES (
+	'admin@gmail.com',
+	'$2y$10$jLqDD4QIMgrpRN79fNdL1uzMhVdMKj7yVVDkTzU8NI442/xWqHGhq',
+	'Administrator',
+	'Tuntungan',
+	'082143658765',
+	'21421',
+	1
+);
