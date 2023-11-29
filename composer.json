@@ -1,0 +1,21 @@
+{
+    "name": "nafbeckh/pln-project",
+    "description": "Project PLN",
+    "homepage": "https://github.com/nafbeckh/pln-project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "nafbeckh",
+            "email": "nafbeckhshn@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app" 
+        }
+    },
+    "require": {
+        "php": ">=8",
+        "filp/whoops": "^2.15"
+    }
+}
