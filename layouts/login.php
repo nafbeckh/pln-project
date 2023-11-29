@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Zakat Fitrah</title>
+  <title>Login - PLN Project</title>
   <link rel="icon" type="image/x-icon" href="<?=AST; ?>/img/eid-mubarak.png">
   <link rel="stylesheet" href="<?=AST; ?>/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
