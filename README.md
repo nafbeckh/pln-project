@@ -13,6 +13,6 @@ Project ini dibuat untuk menyelasikan Tugas 1 mata kuliah Pemrograman Berbasis W
 ## Login
 
 ```
-Username: admin
+Email: admin@gmail.com
 Password: admin
 ```
